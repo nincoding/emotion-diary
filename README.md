@@ -115,3 +115,34 @@ npm i react-router-dom
   - react-router-dom을 이용한 페이지 라우팅 구현
   - 기본적인 BrowserRouter, Routes, Routes, Link to의 사용법을 익히고 페이지 이동 구현하기
   - 페이지(Home, New, Edit, Diary)들을 App 컴포넌트에서 링크 이동할 수 있도록 만듬
+
+<br>
+
+---
+
+**페이지 목록**
+
+- Diary페이지
+  - URL에 경로를 넣어서 사용하는 Path Variable기능 적용
+  - 경로: '/diary'
+  - 어떤 일기를 보여줘야 할지 전달받아야 한다. (ex. /diary/1 -> 1번 일기)
+
+**React Router Dom의 기능**
+
+리액트에서 CSR기반의 페이지 라우팅을 할 수 있게 해주는 라이브러리이다.
+React Router Dom의 대표적인 기능은 아래와 같다.
+
+1. Path Variable
+
+- useParams hook사용 - 사용자 정의 hook (커스텀 훅)
+- 경로에 변수를 사용하는 기법
+
+2. Query String
+
+- useSearchParams
+- URL과 함께 웹 페이지에 데이터를 전달하는 가장 간단한 방법 (ex. `/edit?id=10&mode=dark`)
+
+3. Page Mobing
+
+- useNavigate
+- 페이지를 이동시키는데 Link태그가 아닌 함수에서 유저가 이동하지않았을때도 강제로 이동

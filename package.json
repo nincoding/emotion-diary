@@ -1,0 +1,51 @@
+{
+  "name": "emotion_diary",
+  "version": "1.0.0",
+  "description": "리액트로 만드는 감성 일기장",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx webpack serve --config config/webpack.dev.js",
+    "build:dev": "npx webpack --config config/webpack.dev.js",
+    "build:prod": "npx webpack --config config/webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nincoding/emotion_diary.git"
+  },
+  "keywords": [
+    "react",
+    "webpack"
+  ],
+  "author": "nincoding",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nincoding/emotion_diary/issues"
+  },
+  "homepage": "https://github.com/nincoding/emotion_diary#readme",
+  "dependencies": {
+    "core-js": "^3.29.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^4.2.2",
+    "eslint": "^8.36.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.7.5",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.5",
+    "react-refresh": "^0.14.0",
+    "style-loader": "^3.3.2",
+    "webpack": "^5.76.2",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.1",
+    "webpack-merge": "^5.8.0"
+  }
+}

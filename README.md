@@ -6,7 +6,7 @@
 
 ---
 
-## 프로젝트 셋팅 시 사용한 명령어
+## 📌 프로젝트 셋팅 시 사용한 명령어
 
 ```js
 // package.json 초기설정
@@ -16,6 +16,7 @@ npm init -y
 mkdir src
 mkdir public
 mkdir dist
+mkdir config
 
 // 맥 사용시 touch 명령어로 폴더 디렉토리 이동 후 파일 생성가능
 // src > touch index.js
@@ -93,3 +94,24 @@ npm run dev
 **package.json scripts 작성**
 
 Webpack-dev-server Error 문제는 webpack과 webpack-dev-server 패키지의 버전이 맞지 않는 오류가 있었다. webpack 5버전부터 'serve'로 변경되었다.
+
+### 추가 패키지 명령어
+
+```js
+// 스타일드 컴포넌트 인스톨
+npm i styled-components
+
+// 리액트 라우터 설치
+npm i react-router-dom
+```
+
+<br>
+
+---
+
+## 📌 기능 목록
+
+- 페이지 라우팅 (CSR) 적용하기
+  - react-router-dom을 이용한 페이지 라우팅 구현
+  - 기본적인 BrowserRouter, Routes, Routes, Link to의 사용법을 익히고 페이지 이동 구현하기
+  - 페이지(Home, New, Edit, Diary)들을 App 컴포넌트에서 링크 이동할 수 있도록 만듬

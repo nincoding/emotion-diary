@@ -19,11 +19,22 @@ const configuration = {
         use: ["style-loader", "css-loader"],
         exclude: /node_modules/,
       },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        include: path.resolve(__dirname, 'public/assets/images'),
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'assets/images',
+        },
+      },
     ],
   },
   plugins: [new RefreshWebpackPlugin()],
   devServer: {
-    static: path.join(__dirname, "..", "public"),
+    static: {
+      directory: path.join(__dirname, '..', 'public'), // public 폴더 경로
+    },
     port: 3000,
     open: true,
     compress: true,

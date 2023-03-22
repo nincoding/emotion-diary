@@ -33,6 +33,9 @@ npm install -D webpack webpack-cli webpack-dev-server
 // 코드 파일들을 모듈로 인식하게 만들어주는 로더 모듈 설치 (스타일로더)
 npm install -D style-loader css-loader
 
+// 파일 로더와 추가
+npm i -D file-loader
+
 // 코드를 브라우저 별로 적용 가능한 기준에 맞추어 트랜스파일하는 바벨 모듈 설치
 npm i -D @babel/core @babel/cli @babel/preset-env @babel/preset-react babel-loader
 
@@ -103,6 +106,9 @@ npm i styled-components
 
 // 리액트 라우터 설치
 npm i react-router-dom
+
+// 파일 로더 설치
+npm i -D file-loader
 ```
 
 <br>
@@ -112,9 +118,16 @@ npm i react-router-dom
 ## 📌 기능 목록
 
 - 페이지 라우팅 (CSR) 적용하기
+
   - react-router-dom을 이용한 페이지 라우팅 구현
   - 기본적인 BrowserRouter, Routes, Routes, Link to의 사용법을 익히고 페이지 이동 구현하기
   - 페이지(Home, New, Edit, Diary)들을 App 컴포넌트에서 링크 이동할 수 있도록 만듬
+
+- 기본적인 세팅 적용하기
+  - 폰트세팅 (Google Web Fonts를 이용한 프로젝트에 적용할 폰트 세팅)
+  - 레이아웃 세팅 (모든 페이지에 반영되는 common 레이아웃 세팅)
+  - 이미지 asset 세팅 (감정 이미지들을 프로젝트에 불러와 사용할 수 있는 환경 세팅)
+  - 공통 컴포넌트 세팅 (모든 페이지에 공통으로 사용되는 버튼, 헤더컴포넌트 세팅)
 
 <br>
 
@@ -126,6 +139,8 @@ npm i react-router-dom
   - URL에 경로를 넣어서 사용하는 Path Variable기능 적용
   - 경로: '/diary'
   - 어떤 일기를 보여줘야 할지 전달받아야 한다. (ex. /diary/1 -> 1번 일기)
+
+<br>
 
 **React Router Dom의 기능**
 
@@ -146,3 +161,16 @@ React Router Dom의 대표적인 기능은 아래와 같다.
 
 - useNavigate
 - 페이지를 이동시키는데 Link태그가 아닌 함수에서 유저가 이동하지않았을때도 강제로 이동
+
+<br>
+
+**공통 컴포넌트 세팅**
+
+- 버튼 컴포넌트 (type과 text props가 필요)
+
+  - type이 POSITVE, DEFAULT, NEGATIVE를 각각 가짐
+  - 작성완료, 수정하기, 삭제하기 text를 각각 가짐
+
+- Header 컴포넌트 세팅
+  - 기본적으로 왼쪽, 중앙, 오른쪽 구간을 공통으로 가지고 있음
+  - 왼쪽 오른쪽에는 버튼이, 중앙에는 text가 위치함

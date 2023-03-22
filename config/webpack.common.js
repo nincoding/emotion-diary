@@ -25,6 +25,9 @@ const configuration = {
       template: path.join(__dirname, "..", "public", "index.html"),
     }),
     new webpack.ProvidePlugin({ React: "react" }),
+    new webpack.DefinePlugin({
+      'process.env.PUBLIC_URL': JSON.stringify('http://localhost:3000'),
+    }),
   ],
 };
 
